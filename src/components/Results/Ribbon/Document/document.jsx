@@ -32,7 +32,6 @@ const Document = ({ index, item }) => {
         className="document-illustration"
         style={{
           backgroundImage: `url(/images/${item.illustration})`,
-          backgroundRepeat: "no-repeat",
         }}
       ></div>
       <p className="document-content">{unmarkup(item.content)}</p>
