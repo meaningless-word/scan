@@ -1,0 +1,56 @@
+.check-box__wrapper {
+    display: block;
+    margin: 10px 0;
+    font-family: InterRegular, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+
+    >input[type=checkbox] {
+        z-index: -1;
+        opacity: 0;
+        display: block;
+        width: 0;
+        height: 0;
+
+    }
+
+    >span {
+        display: inline-block;
+        position: relative;
+        line-height: 20px;
+        padding: 0 0 0 35px;
+    }
+
+    >span:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url("./empty.svg") 0 0 no-repeat;
+    }
+
+    >input[type=checkbox]:checked+span:before {
+        background-image: url("./checked.svg");
+        border: 1px solid var(--main-dark);
+    }
+
+    >input[type=checkbox]+span {
+        opacity: 0.4;
+    }
+
+    >input[type=checkbox]:checked+span {
+        opacity: 1;
+    }
+
+    >input[type=checkbox]+span:hover:before {
+        outline: 2px solid var(--main-dark);
+    }
+
+    >span:active:before {
+        filter: blur(1px);
+    }
+}

@@ -1,0 +1,30 @@
+.tariffs-area {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tariffs {
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 1360px) {
+    .tariffs-area {
+        width: 100%;
+        padding: 0 14px;
+
+        >h2 {
+            font-size: 28px;
+        }
+    }
+
+    .tariffs {
+        flex-direction: column;
+        margin: 0;
+    }
+}

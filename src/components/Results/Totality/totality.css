@@ -1,0 +1,48 @@
+.totality_place {
+    width: 131px;
+    height: 158px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border-radius: 8px 0 0 8px;
+    font-size: 18px;
+    padding-top: 2px;
+
+    >span {
+        display: block;
+        padding: 15px 0;
+    }
+}
+
+.totality_splitter {
+    height: 124px;
+    width: 2px;
+    background-color: var(--pale-text);
+    opacity: 0.4;
+    margin: auto 0;
+}
+
+@media (max-width: 1360px) {
+    .totality_place {
+        width: 298px;
+        height: 100%;
+        flex-direction: row;
+        font-size: 16px;
+        border-radius: 0 0 8px 8px;
+        justify-content: space-between;
+        padding: 0 15px;
+
+        >span {
+            width: calc(298px / 3);
+            padding: unset;
+            text-align: center;
+        }
+
+    }
+
+    .totality_splitter {
+        display: none;
+    }
+
+}

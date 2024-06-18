@@ -1,0 +1,49 @@
+.edit-box__input {
+    width: 100%;
+    font-family: "InterRegular", sans-serif;
+    font-size: 14px;
+    height: 43px;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 4px;
+    border: 1px solid var(--pale-border);
+    color: var(--main-dark);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.edit-box__input:focus {
+    outline: 1px solid var(--main-bg);
+    border: 1px solid var(--main-bg);
+}
+
+.edit-box__input_error-state {
+    border: 1px solid var(--error-text);
+    color: var(--error-text);
+    box-shadow: 0px 0px 10px 0px var(--error-shadow);
+}
+
+.edit-box__input_error-state:focus {
+    outline: 1px solid var(--error-text);
+    border: 1px solid var(--error-text);
+}
+
+.edit-box__requirer {
+    font-size: 25px;
+}
+
+.edit-box__caption {
+    font-size: 18px;
+    display: block;
+}
+
+.edit-box__error_message {
+    font-family: InterRegular, sans-serif;
+    text-align: center;
+    text-wrap: nowrap;
+    margin-top: 5px;
+    min-height: 35px;
+}
+
+.edit-box__error-state {
+    color: var(--error-text);
+}

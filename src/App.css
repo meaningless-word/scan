@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body,
+#root {
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+:root {
+  --main-bg: #029491;
+  --main-dark: #000;
+  --main-light: #fff;
+
+  --supp-bg: #7CE3E1;
+  --supp-bg-alter: #FFB64F;
+
+  --btn-bg: #5970FF;
+  --btn-bg-alter: #D2D2D2;
+
+  --selector-bg: #3BA5E0;
+  --pale-border: #C7C7C7;
+  --pale-text: #949494;
+  --pale-bg: #D9D9D9;
+
+  --error-text: #FF5959;
+  --error-shadow: rgba(255, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@font-face {
+  font-family: 'Ferry';
+  src: local('ferry'), url('./fonts/ferry_black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'InterRegular';
+  src: local('InterRegular'), url('./fonts/Inter-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'InterMedium';
+  src: local('InterMedium'), url('./fonts/Inter-Medium.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'InterBold';
+  src: local('InterBold'), url('./fonts/Inter-Bold.ttf') format('truetype')
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  flex-grow: 1;
+}
+
+article {
+  max-width: 1440px;
+  margin: 93px auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-light);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+h1 {
+  font-family: Ferry, sans-serif;
+  font-size: 60px;
+  margin: 0;
+}
+
+h2 {
+  font-family: Ferry, sans-serif;
+  font-size: 45px;
+}
+
+p {
+  font-family: InterRegular;
+  font-weight: 400;
+}
+
+@media (max-width: 1360px) {
+  article {
+    width: 100vw;
+    margin: 93px 0 0 0;
   }
 }

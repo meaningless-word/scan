@@ -1,0 +1,27 @@
+.date-range-picker__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.date-range-picker__caption {
+    width: 100%;
+    font-size: 18px;
+    display: block;
+}
+
+.date-range-picker__requirer {
+    font-size: 25px;
+}
+
+.date-range-picker__error_message {
+    font-family: InterRegular, sans-serif;
+    text-align: center;
+    text-wrap: nowrap;
+    margin-top: 5px;
+    min-height: 35px;
+}
+
+.date-range-picker__error-state {
+    color: var(--error-text);
+}

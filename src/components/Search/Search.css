@@ -1,0 +1,222 @@
+.search {
+    width: 1320px;
+    margin: 93px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search-content {
+    display: flex;
+    flex-direction: column;
+    margin: 70px 0;
+
+    >h1 {
+        font-family: Ferry, sans-serif;
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    >p {
+        font-family: InterRegular, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        padding-top: 10px;
+    }
+}
+
+.search-content__form {
+    width: 872px;
+    height: 543px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: InterRegular, sans-serif;
+    font-size: 18px;
+    padding: 20px 40px;
+
+    >.column {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.search-content__form_edit-box {
+    width: 242px;
+}
+
+.search-content__form_drop-down-list {
+    width: 242px;
+}
+
+.search-content__form_date-range-picker {
+    width: 372px;
+
+    >div {
+        >div {
+            width: 176px;
+        }
+    }
+}
+
+.search-content__form_check-box-group {
+    width: 406px;
+}
+
+
+.search-content__form_submit-area {
+    font-family: InterRegular;
+    margin-top: 140px;
+    margin-left: 100px;
+
+
+    >button {
+        width: 305px;
+        height: 59px;
+        margin-top: 40px;
+        background-color: var(--btn-bg);
+        color: var(--main-light);
+        font-weight: 500;
+        font-size: 22px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    >button:not(:disabled):hover {
+        background-color: var(--supp-bg);
+        color: var(--main-dark)
+    }
+
+    >button:disabled {
+        opacity: 50%;
+        cursor: default;
+    }
+
+    >p {
+        font-size: 14px;
+        color: var(--pale-text);
+    }
+}
+
+.search-decor {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    align-items: flex-end;
+
+    >img {
+        margin: 50px auto;
+    }
+}
+
+.search-decor_mobile {
+    display: none;
+}
+
+@media (max-width: 1360px) {
+    .search {
+        width: 100vw;
+        margin: unset;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .search-content {
+        width: 100%;
+        margin-top: 100px;
+
+        >h1 {
+            font-size: 28px;
+            padding-left: 14px;
+        }
+
+        >p {
+            font-size: 18px;
+            padding: 0 0 0 14px;
+            width: 70%;
+            margin-top: -10px;
+        }
+    }
+
+    .search-content__form {
+        width: 100%;
+        height: 688px;
+        flex-wrap: nowrap;
+        padding: 20px 0;
+        margin-top: 0;
+    }
+
+    .search-content__form_edit-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .search-content__form_drop-down-list {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .search-content__form_date-range-picker {
+        width: 90%;
+        margin: 0 auto;
+
+        >div {
+            flex-direction: column;
+
+            >div {
+                width: 100%;
+            }
+        }
+    }
+
+    .search-content__form_check-box-group {
+        display: none;
+    }
+
+    .search-content__form_submit-area {
+        width: 90%;
+        margin: 0 auto;
+
+        >button {
+            width: 100%;
+            margin: unset;
+            font-size: 20px;
+        }
+    }
+
+    .search-decor {
+        width: 100%;
+        margin: unset;
+        overflow: hidden;
+
+        >img:first-of-type {
+            display: none;
+        }
+
+        >img+img {
+            width: auto;
+            height: 403px;
+            margin: 20px 0 0 36px;
+        }
+
+    }
+
+    .search-decor_mobile {
+        display: flex;
+        width: 58px;
+        height: 71px;
+        overflow: hidden;
+        padding: 0;
+        margin-left: 70%;
+        margin-top: -40px;
+
+        >img {
+            width: auto;
+            height: 71px;
+        }
+    }
+}

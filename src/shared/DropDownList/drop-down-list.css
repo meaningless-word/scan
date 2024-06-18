@@ -1,0 +1,48 @@
+.drop-down-list {
+    font-family: "InterRegular", sans-serif;
+    font-size: 14px;
+
+
+    >select {
+        width: 100%;
+        height: 43px;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 15px;
+        font-family: "InterRegular", sans-serif;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid var(--pale-border);
+        font-size: 14px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url("./drop-down-list.svg") 95% 50% no-repeat;
+    }
+
+    >select:focus {
+        outline: 1px solid var(--main-bg);
+        border: 1px solid var(--main-bg);
+    }
+
+    >select::-ms-expand {
+        display: none;
+        /* удалите стрелку по умолчанию в IE 10 и 11 */
+    }
+}
+
+.drop-down-list__caption {
+    width: 100%;
+    font-size: 18px;
+    display: block;
+}
+
+.drop-down-list__error_message {
+    width: 100%;
+    font-family: InterRegular, sans-serif;
+    text-align: center;
+    text-wrap: nowrap;
+    margin-top: 5px;
+    min-height: 35px;
+}

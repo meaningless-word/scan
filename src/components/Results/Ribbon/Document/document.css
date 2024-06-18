@@ -1,0 +1,144 @@
+.document-wrap {
+    width: 641px;
+    height: 694px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 36px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.document-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    color: var(--pale-text);
+
+    >span {
+        font-size: 16px;
+    }
+
+    >a {
+        text-decoration: underline;
+        margin-left: 15px;
+        color: var(--pale-text);
+    }
+}
+
+.document-title {
+    font-size: 26px;
+    font-family: 'InterMedium', sans-serif;
+    font-weight: 500;
+    max-height: 80px;
+    text-overflow: ellipsis;
+}
+
+.document-tag {
+    width: 157px;
+    height: 22px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: 'InterRegilar', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--supp-bg-alter);
+
+}
+
+.document-illustration {
+    width: 581px;
+    height: 158px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.document-content {
+    height: 228px;
+    font-family: InterRegular, sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0.5;
+    background: linear-gradient(to top, transparent 0%, var(--main-dark) 20%, var(--main-dark) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+.document-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--pale-text);
+
+    >span {
+        font-size: 16px;
+    }
+
+    >button {
+        width: 223px;
+        height: 46px;
+        background-color: var(--supp-bg);
+        color: var(--main-dark);
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    >button:hover {
+        background-color: var(--btn-bg);
+        color: var(--main-light);
+        opacity: 1;
+    }
+
+}
+
+@media (max-width: 1360px) {
+    .document-wrap {
+        width: 100%;
+        padding: 20px;
+        margin-top: 15px;
+    }
+
+    .document-info {
+        font-size: 14px;
+
+        >span {
+            font-size: 14px;
+        }
+    }
+
+    .document-title {
+        font-size: 19px;
+    }
+
+    .document-tag {
+        width: 132px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .document-illustration {
+        width: 100%;
+    }
+
+    .document-content {
+        font-size: 12px;
+        height: 250px;
+    }
+
+    .document-footer {
+        >span {
+            font-size: 14px;
+        }
+
+        >button {
+            width: 195px;
+            height: 40px;
+            font-size: 14px;
+        }
+    }
+}

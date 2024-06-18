@@ -1,0 +1,197 @@
+.tariff-card {
+    width: 415px;
+    height: 540px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.tariff-header {
+    width: 100%;
+    height: 132px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    >img {
+        width: 90px;
+        margin-right: 10px;
+    }
+
+    >div {
+        padding: 30px;
+        margin-right: -30px;
+
+    }
+
+    >div>h3 {
+        font-family: InterMedium, sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    >div>p {
+        font-family: InterMedium, sans-serif;
+        font-size: 18px;
+        margin: 0;
+        padding-top: 10px;
+    }
+}
+
+
+.tariff-header-coloring__Beginner {
+    background-color: var(--supp-bg-alter);
+    color: var(--main-dark);
+}
+
+.tariff-header-coloring__Pro {
+    background-color: var(--supp-bg);
+    color: var(--main-dark);
+}
+
+.tariff-header-coloring__Business {
+    background-color: var(--main-dark);
+    color: var(--main-light);
+}
+
+.tariff-body-bordering__Beginner {
+    border-style: solid;
+    border-radius: 0 0 10px 10px;
+    border-width: 2px;
+    border-color: var(--supp-bg-alter);
+}
+
+.tariff-body-bordering__Pro {
+    border-style: solid;
+    border-radius: 0 0 10px 10px;
+    border-top: 0;
+    border-width: 2px;
+    border-color: var(--supp-bg);
+}
+
+.tariff-body-bordering__Business {
+    border-style: solid;
+    border-radius: 0 0 10px 10px;
+    border-width: 2px;
+    border-color: var(---main-dark);
+}
+
+.tariff-body {
+    width: 100%;
+    height: calc(540px - 132px);
+    padding: 0 0 20px 30px;
+}
+
+.tariff-body__current {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.tariff-body__current_active {
+    width: 134px;
+    height: 24px;
+    border-radius: 10px;
+    background-color: var(--selector-bg);
+    color: var(--main-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: InterRegular, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 15px;
+}
+
+.tariff-body__price {
+    width: 100%;
+    height: 124px;
+}
+
+.tariff-body__price_now {
+    font-family: InterMedium, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0;
+}
+
+.tariff-body__price_old {
+    font-family: InterMedium, sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    opacity: 50%;
+    text-decoration: line-through;
+    padding-left: 20px;
+}
+
+.tariff-body__price_split {
+    display: block;
+    font-family: InterMedium, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 7px 0;
+}
+
+.tariff-body__inclusions {
+    width: 100%;
+    height: 165px;
+    font-family: InterMedium, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tariff-body__inclusions_list {
+    font-family: InterMedium, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 8px 0 0 0;
+    padding: 0;
+
+    >li {
+        list-style-type: none;
+        margin: 3px 0;
+
+        >img {
+            margin-right: 7px;
+        }
+    }
+}
+
+.tariff-body__button {
+    background-color: var(--btn-bg);
+    color: var(--main-light);
+    border-radius: 5px;
+    border: none;
+    font-family: InterRegular, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    width: 355px;
+    height: 59px;
+}
+
+.tariff-body__button_active {
+    background-color: var(--btn-bg-alter);
+    color: var(--main-dark);
+}
+
+@media (max-width: 1360px) {
+    .tariff-card {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .tariff-body {
+        padding: 0 0 10px 10px;
+    }
+
+    .tariff-body__button {
+        width: 85%;
+        margin: 0 6%;
+    }
+}
