@@ -27,8 +27,9 @@ const Results = () => {
   const [counter, setCounter] = useState(0);
   const [summary, setSummary] = useState(null);
 
+  const objQuery = location.state?.search;
+
   const fetchHistograms = async () => {
-    const objQuery = location.state?.search;
     if (!objQuery) {
       console.error("Empty query");
       setIsLoading(false);
@@ -62,6 +63,13 @@ const Results = () => {
       .finally(() => {
         setIsLoading(false);
       });
+  };
+
+  const fetchObjects = async () => {
+    if (!objQuery) {
+      console.error("Empty query");
+      return;
+    }
 
     await axios
       .post(API_URL + "objectsearch/", objQuery, {
@@ -130,7 +138,8 @@ const Results = () => {
   useEffect(() => {
     console.log("histograms=", histograms);
     pivot();
-  }, [histograms, documentIds]);
+    fetchObjects();
+  }, [histograms]);
 
   const handleScrollPrev = (e) => {
     if (bannerRef.current) {

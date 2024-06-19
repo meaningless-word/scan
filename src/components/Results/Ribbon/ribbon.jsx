@@ -79,7 +79,7 @@ const Ribbon = ({ ids }) => {
       <h1>Список документов</h1>
       <div className="ribbon__doc-holder">
         {documents.map((item, index) => (
-          <Document index={index} item={item} />
+          <Document key={`doc-${index}`} index={index} item={item} />
         ))}
       </div>
       <div className="ribbon__button-holder">
